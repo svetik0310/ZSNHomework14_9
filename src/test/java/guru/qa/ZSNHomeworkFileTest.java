@@ -4,6 +4,7 @@ import com.codeborne.xlstest.XLS;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.opencsv.CSVReader;
 import com.codeborne.pdftest.PDF;
+import guru.qa.data.Products;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;

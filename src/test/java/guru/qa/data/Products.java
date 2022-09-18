@@ -1,4 +1,4 @@
-package guru.qa;
+package guru.qa.data;
 
 public class Products {
     private String designerName;
