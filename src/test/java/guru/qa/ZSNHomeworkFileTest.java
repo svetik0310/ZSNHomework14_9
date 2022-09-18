@@ -7,7 +7,6 @@ import com.codeborne.pdftest.PDF;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.List;
@@ -18,7 +17,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 public class ZSNHomeworkFileTest {
-    private final ClassLoader classLoader = ZSNHomeworkFileTest.class.getClassLoader();
 
     private InputStream getFileFromZip(String fileName) throws Exception {
         ZipFile zip = new ZipFile(new File("src/test/resources/testFile.zip"));
@@ -53,7 +51,8 @@ public class ZSNHomeworkFileTest {
 
 
     @Test
-    void jsonTest() throws IOException {
+    void jsonTest() throws Exception {
+        ClassLoader classLoader = ZSNHomeworkFileTest.class.getClassLoader();
         var fileName = "testJson.json";
         try (InputStream inputStream = classLoader.getResourceAsStream(fileName)) {
             ObjectMapper objectMapper = new ObjectMapper();
