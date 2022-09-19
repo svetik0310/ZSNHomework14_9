@@ -60,9 +60,10 @@ public class ZSNHomeworkFileTest {
             Products product = objectMapper.readValue(inputStream, Products.class);
             assertThat(product.getDesignerName()).isEqualTo("DIOR");
             assertThat(product.getColor()).isEqualTo("red");
-            assertThat(product.getSize()).isEqualTo(38);
-            assertThat(product.isInStock()).isEqualTo(true);
             assertThat(product.getCost()).isEqualTo(129999);
+            assertThat(product.getAvailability().getSize()).isEqualTo(38);
+            assertThat(product.getAvailability().isInStock()).isEqualTo(true);
+            assertThat(product.getStructure()).contains("viscose","polyamide","wool");
         }
     }
 

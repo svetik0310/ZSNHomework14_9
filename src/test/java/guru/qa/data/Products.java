@@ -4,8 +4,9 @@ public class Products {
     private String designerName;
     private String color;
     private int cost;
-    private int size;
-    private boolean inStock;
+    Availability availability;
+    private String[] structure;
+
 
     public Products() {
     }
@@ -34,19 +35,37 @@ public class Products {
         this.color = color;
     }
 
-    public int getSize() {
-        return size;
+    public void setStructure(String[] structure){
+        this.structure=structure;
     }
 
-    public void setSize(int size) {
-        this.size = size;
+    public String[] getStructure(){
+        return structure;
     }
 
-    public boolean isInStock() {
-        return inStock;
+    public void setAvailability(Availability availability) {
+        this.availability = availability;
+    }
+    public Availability getAvailability(){
+        return availability;
     }
 
-    public void setInStock(boolean inStock) {
-        this.inStock = inStock;
+    public class Availability{
+        private int size;
+        private boolean inStock;
+        public boolean isInStock() {
+            return inStock;
+        }
+        public void setInStock(boolean inStock) {
+            this.inStock = inStock;
+        }
+
+        public int getSize() {
+            return size;
+        }
+
+        public void setSize(int size) {
+            this.size = size;
+        }
     }
 }

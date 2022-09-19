@@ -1,7 +1,10 @@
 {
     "designerName": "DIOR",
     "color": "red",
-	"inStock": "true",
 	"cost": "129999",
-	"size":38
+	"availability":{
+		"inStock": "true",
+		"size":38
+	},
+	"structure":["viscose","polyamide","wool"]
 }
